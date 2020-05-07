@@ -1,27 +1,45 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <twis-form />
   </div>
 </template>
 
 <script>
-  import HelloWorld from "./components/HelloWorld.vue";
-
+  import TwisForm from "./components/twisform/TwisForm";
   export default {
     name: "App",
     components: {
-      HelloWorld,
+      TwisForm,
     },
   };
 </script>
 
-<style>
+<style lang="scss">
+  @charset "utf-8";
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+  @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 5vh 0;
+    background-image: url("./assets/img/bg-dusk.webp");
+    font-family: "Montserrat", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    #app {
+      height: 100vh;
+      padding: 0;
+    }
+  }
+
+  body {
+    margin: 0;
   }
 </style>
