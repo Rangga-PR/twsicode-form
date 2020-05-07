@@ -18,13 +18,8 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          { loader: "css-loader", options: { importLoaders: 1 } },
-          "postcss-loader",
-          "sass-loader",
-        ],
+        test: /\.s[ac]ss$/,
+        use: ["vue-style-loader", "css-loader", "sass-loader"],
       },
     ],
   },

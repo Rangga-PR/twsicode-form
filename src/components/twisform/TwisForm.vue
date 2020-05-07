@@ -123,9 +123,8 @@
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .container {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     margin: 0 15px;
